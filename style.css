@@ -1,0 +1,358 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#121212;
+    color:#d9d9d9;
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+:root{
+    --bg:#121212;
+    --card:#1a1a1a;
+    --accent:#ff2d55;
+    --text:#d9d9d9;
+    --white:#ffffff;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-family:'Oswald', sans-serif;
+    font-size:3rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    display:inline-block;
+    background:var(--accent);
+    color:white;
+    padding:14px 28px;
+    border-radius:6px;
+    font-weight:600;
+    transition:.3s ease;
+    border:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(255,45,85,.5);
+}
+
+.btn-nav{
+    padding:12px 24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(18,18,18,.9);
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    color:white;
+    font-family:'Oswald', sans-serif;
+    font-size:2rem;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:var(--text);
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--accent);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1590246815117-b9d9c0c39b41?w=1600")
+    center/cover;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-family:'Oswald', sans-serif;
+    color:white;
+    font-size:5rem;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:600px;
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.about-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+    border:1px solid var(--accent);
+}
+
+.about-card h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+/* =========================
+   ARTISTS
+========================= */
+
+.artists-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.artist-card{
+    overflow:hidden;
+    border-radius:12px;
+    background:var(--card);
+    transition:.4s;
+}
+
+.artist-card:hover{
+    transform:translateY(-8px);
+}
+
+.artist-card img{
+    height:350px;
+    object-fit:cover;
+}
+
+.artist-info{
+    padding:20px;
+}
+
+.artist-info h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    height:320px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   CONTACTS
+========================= */
+
+.contacts-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info h2{
+    margin-bottom:20px;
+    color:white;
+    font-size:2.5rem;
+}
+
+.contact-info p{
+    margin-bottom:15px;
+}
+
+.socials{
+    margin-top:25px;
+    display:flex;
+    gap:15px;
+}
+
+.socials a{
+    color:var(--accent);
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background:var(--card);
+    border:1px solid #2a2a2a;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    font-size:1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:var(--accent);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    text-align:center;
+    padding:30px 20px;
+    border-top:1px solid #222;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .about-content,
+    .artists-grid,
+    .contacts-wrapper{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:2.7rem;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+}
